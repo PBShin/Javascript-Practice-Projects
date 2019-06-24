@@ -16,7 +16,6 @@ function titleCase(str) {
       restArr.push(letter);
     }
     let rest = restArr.join("");
-    //let rest=word.slice(1,word.length);
     word = firstLetter+rest;
     newArr.push(word);
     console.log(newArr);
