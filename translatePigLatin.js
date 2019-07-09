@@ -1,5 +1,3 @@
-// Function that translate string to Pig Latin
-
 function translatePigLatin(str) {
   str=str.toLowerCase();
   //console.log(str);
@@ -8,12 +6,15 @@ function translatePigLatin(str) {
     console.log("vowel");
     str=str+"way";
   } else {
+    let consRegex = /^([^aeiou]+)(.*)$/;
+    let matches = str.match(consRegex);
+    console.log(matches);
+    let cons = matches[1];
     console.log("cons");
-    let letter = str.slice[0];
-    str=str.slice(1)+letter+"ay";
+    str=str.slice(cons.length)+cons+"ay";
   }
   return str;
 }
 
 translatePigLatin("consonant");
-//console.log(translatePigLatin(str));
+console.log(translatePigLatin("consonant"));
